@@ -1,5 +1,5 @@
 class ControlTower < Formula
-  version "0.12.8"
+  version "0.12.9"
   desc "Deploy and operate Concourse CI in a single command"
   homepage "https://www.engineerbetter.com"
   license "Apache-2.0"
