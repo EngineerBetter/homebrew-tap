@@ -20,6 +20,7 @@ class ControlTower < Formula
       bin.install "control-tower-darwin-amd64" => binary_name
     elsif OS.linux?
       bin.install "control-tower-linux-amd64" => binary_name
+    end
   end
 
   test do
