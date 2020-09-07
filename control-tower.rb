@@ -7,6 +7,7 @@ class ControlTower < Formula
   url "https://github.com/EngineerBetter/control-tower/releases/download/0.12.9/control-tower-darwin-amd64"
   sha256 "49d3dc7df47d77c9e1edbb82fdd5f7bf43c84e1f0873396a097a1d40d8f39eeb"
   license "Apache-2.0"
+  version "0.12.9"
 
   # depends_on "cmake" => :build
 
