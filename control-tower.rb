@@ -1,28 +1,28 @@
-# Documentation: https://docs.brew.sh/Formula-Cookbook
-#                https://rubydoc.brew.sh/Formula
-# PLEASE REMOVE ALL GENERATED COMMENTS BEFORE SUBMITTING YOUR PULL REQUEST!
 class ControlTower < Formula
+  version "0.12.8"
   desc "Deploy and operate Concourse CI in a single command"
   homepage "https://www.engineerbetter.com"
-  url "https://github.com/EngineerBetter/control-tower/releases/download/0.12.9/control-tower-darwin-amd64"
-  sha256 "49d3dc7df47d77c9e1edbb82fdd5f7bf43c84e1f0873396a097a1d40d8f39eeb"
   license "Apache-2.0"
-  version "0.12.9"
 
-  # depends_on "cmake" => :build
+  if OS.mac?
+    url "https://github.com/EngineerBetter/control-tower/releases/download/#{version}/control-tower-darwin-amd64"
+    sha256 "6489c1eaa40a3929e913a32986c7502d618b71db38be90d2b3f6f7944b8dffbe"
+  elsif OS.linux?
+    url "https://github.com/EngineerBetter/control-tower/releases/download/#{version}/control-tower-linux-amd64"
+    sha256 "c54b58ea1406aada56cf20ec7584389329397277b2f45f6130ca450891fac27b"
+  end
+
+  depends_on :arch => :x86_64
 
   def install
-    bin.install "control-tower-darwin-amd64" => "control-tower"
+    binary_name = "control-tower"
+    if OS.mac?
+      bin.install "control-tower-darwin-amd64" => binary_name
+    elsif OS.linux?
+      bin.install "control-tower-linux-amd64" => binary_name
   end
 
   test do
     system "#{bin}/control-tower --help"
   end
 end
-
-
-# desc "Deploy and operate Concourse CI in a single command"
-# homepage "https://www.engineerbetter.com"
-# url "https://github.com/EngineerBetter/control-tower/releases/download/0.12.9/control-tower-darwin-amd64"
-# sha256 "49d3dc7df47d77c9e1edbb82fdd5f7bf43c84e1f0873396a097a1d40d8f39eeb"
-# license "Apache-2.0"
