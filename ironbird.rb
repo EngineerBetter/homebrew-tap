@@ -1,8 +1,8 @@
-class ControlTower < Formula
+class Ironbird < Formula
   desc "Test Concourse tasks using a YAML DSL for Ginkgo/Gomega"
   homepage "https://www.engineerbetter.com"
   license "Apache-2.0"
-  version "0.0.12"
+  version "0.0.13"
 
   if OS.mac?
     url "https://github.com/EngineerBetter/ironbird/releases/download/#{version}/ironbird-darwin"
