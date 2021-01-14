@@ -6,10 +6,10 @@ class ControlTower < Formula
 
   if OS.mac?
     url "https://github.com/EngineerBetter/control-tower/releases/download/#{version}/control-tower-darwin-amd64"
-    sha256 "6c5d07a5d113c78f23b4cea5cfae954367ebddd461498131089fb4ada91d1fb7"
+    sha256 "760863d522da074f262addc5b4b2126fad914793e050ce68b7df72d0d91397d2"
   elsif OS.linux?
     url "https://github.com/EngineerBetter/control-tower/releases/download/#{version}/control-tower-linux-amd64"
-    sha256 "a18e53bd228cfeb5603d7968ae89da3480865f19f7f64f784e31cafc303780a9"
+    sha256 "0a9cc2aa30c348beb44503a7f565535afa0d660e37f5229dcdf324e71ac3f793"
   end
 
   depends_on :arch => :x86_64
