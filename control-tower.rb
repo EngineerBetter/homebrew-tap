@@ -2,14 +2,14 @@ class ControlTower < Formula
   desc "Deploy and operate Concourse CI in a single command"
   homepage "https://www.engineerbetter.com"
   license "Apache-2.0"
-  version "0.19.3"
+  version "0.19.4"
 
   if OS.mac?
     url "https://github.com/EngineerBetter/control-tower/releases/download/#{version}/control-tower-darwin-amd64"
-    sha256 "3e7f2330a3a2fe86217df1d36baadc736809e9259b8f3470f257325b01e743df"
+    sha256 "29f526f361abb027751917abcb40ae8fcc843ae9d248bde5d02725362848e760"
   elsif OS.linux?
     url "https://github.com/EngineerBetter/control-tower/releases/download/#{version}/control-tower-linux-amd64"
-    sha256 "74372be587ff03b65801d4a3d3eb6ca13230a591acf09b628cba6db66460ff70"
+    sha256 "68fdff4dec6028f5646a22fd88025ed8af1d8b7475e0d490950fc64295839bd1"
   end
 
   depends_on :arch => :x86_64
