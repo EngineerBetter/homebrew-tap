@@ -4,10 +4,8 @@ class ControlTower < Formula
   version "0.20.4"
   license "Apache-2.0"
 
-  is_arm64 = RUBY_PLATFORM.include?("arm64")
-
   if OS.mac?
-    if is_arm64
+    if RUBY_PLATFORM.include?("arm64")
       url "https://github.com/EngineerBetter/control-tower/releases/download/#{version}/control-tower-darwin-arm64"
       sha256 "66555504abfc9f7baa331eb53823732716f14cbc8c18c7f4efe738e9ab9e22a2"
     else
@@ -22,7 +20,7 @@ class ControlTower < Formula
   def install
     binary_name = "control-tower"
     if OS.mac?
-      if is_arm64
+      if RUBY_PLATFORM.include?("arm64")
         bin.install "control-tower-darwin-arm64" => binary_name
       else
         bin.install "control-tower-darwin-amd64" => binary_name
