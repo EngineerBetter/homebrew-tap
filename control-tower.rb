@@ -1,20 +1,20 @@
 class ControlTower < Formula
   desc "Deploy and operate Concourse CI in a single command"
   homepage "https://www.engineerbetter.com"
-  version "0.29.0"
+  version "0.30.0"
   license "Apache-2.0"
 
   if OS.mac?
     if RUBY_PLATFORM.include?("arm64")
       url "https://github.com/EngineerBetter/control-tower/releases/download/#{version}/control-tower-darwin-arm64"
-      sha256 "146416d3a580af294191f8ae41922d8dd75e9bd3912ec4188b06abe5a03c655b"
+      sha256 "717b0709b1cdd88b05198655c5e99fbd536afce81e8add8ac70c28d7133414d6"
     else
       url "https://github.com/EngineerBetter/control-tower/releases/download/#{version}/control-tower-darwin-amd64"
-      sha256 "a11e1750fb85a05b0449bc1d65652427cb1d067d04cc88be9173374f9af4dffe"
+      sha256 "c847c91cd33aaa0da8a1db6a2cdbe5c9da854ac91d02de462d68ea57a911dca8"
     end
   elsif OS.linux?
     url "https://github.com/EngineerBetter/control-tower/releases/download/#{version}/control-tower-linux-amd64"
-    sha256 "c0e77ec3dfd797aaa25b32f2b15e2744c660ce8e791f6fe83990362a4bb85e2c"
+    sha256 "bc4f6ddfd147bf608c75772e6a72a0de26645cba1960c004ae22fb215102bee8"
   end
 
   def install
